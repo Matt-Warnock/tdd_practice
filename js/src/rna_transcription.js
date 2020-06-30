@@ -2,10 +2,10 @@ class Transcription {
   constructor() {
 
   }
-  
+
   toRNA(dna) {
-    const dnaNucleotides = ['C', 'G', 'T'],
-    rnaNucleotides = ['G', 'C', 'A'];
+    const dnaNucleotides = ['C', 'G', 'T', 'A'],
+    rnaNucleotides = ['G', 'C', 'A', 'U'];
     let rna = '';
 
     dnaNucleotides.forEach((nuc, index) => {

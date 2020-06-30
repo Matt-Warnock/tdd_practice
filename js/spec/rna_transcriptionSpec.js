@@ -22,7 +22,7 @@ describe('Transcription', () => {
     expect(transcription.toRNA('T')).toEqual('A');
   });
 
-  xit('transcribes adenine to uracil', () => {
+  it('transcribes adenine to uracil', () => {
     expect(transcription.toRNA('A')).toEqual('U');
   });
 
