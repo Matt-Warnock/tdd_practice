@@ -26,7 +26,7 @@ describe('Transcription', () => {
     expect(transcription.toRNA('A')).toEqual('U');
   });
 
-  xit('transcribes all DNA nucleotides to their RNA complements', () => {
+  it('transcribes all DNA nucleotides to their RNA complements', () => {
     expect(transcription.toRNA('ACGTGGTCTTAA')).toEqual('UGCACCAGAAUU');
   });
 });

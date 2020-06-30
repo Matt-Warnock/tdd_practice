@@ -8,11 +8,14 @@ class Transcription {
     rnaNucleotides = ['G', 'C', 'A', 'U'];
     let rna = '';
 
-    dnaNucleotides.forEach((nuc, index) => {
-      if (dna === nuc) {
-        console.log(rnaNucleotides[index]);
-        rna = rnaNucleotides[index];
-      }
+    let stringArray = Array.from(dna);
+
+    stringArray.forEach(string => {
+      dnaNucleotides.forEach((nuc, index) => {
+        if (string === nuc) {
+          rna += rnaNucleotides[index];
+        }
+      });
     });
 
     return rna;
