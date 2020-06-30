@@ -2,17 +2,19 @@ class Transcription {
   constructor() {
 
   }
+  
   toRNA(dna) {
-    if (dna === 'C') {
-      dna = 'G';
-      return dna;
-    }
-    if (dna === 'G') {
-      dna = 'C';
-    }
-    if (dna === 'T') {
-      dna = 'A';
-    }
-    return dna;
+    const dnaNucleotides = ['C', 'G', 'T'],
+    rnaNucleotides = ['G', 'C', 'A'];
+    let rna = '';
+
+    dnaNucleotides.forEach((nuc, index) => {
+      if (dna === nuc) {
+        console.log(rnaNucleotides[index]);
+        rna = rnaNucleotides[index];
+      }
+    });
+
+    return rna;
   }
 }
