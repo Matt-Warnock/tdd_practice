@@ -10,7 +10,7 @@ describe('Transcription', () => {
     expect(transcription.toRNA('')).toEqual('');
   });
 
-  xit('transcribes cytosine to guanine', () => {
+  it('transcribes cytosine to guanine', () => {
     expect(transcription.toRNA('C')).toEqual('G');
   });
 
