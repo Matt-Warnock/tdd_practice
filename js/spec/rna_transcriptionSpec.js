@@ -14,11 +14,11 @@ describe('Transcription', () => {
     expect(transcription.toRNA('C')).toEqual('G');
   });
 
-  xit('transcribes guanine to cytosine', () => {
+  it('transcribes guanine to cytosine', () => {
     expect(transcription.toRNA('G')).toEqual('C');
   });
 
-  xit('transcribes thymine to adenine', () => {
+  it('transcribes thymine to adenine', () => {
     expect(transcription.toRNA('T')).toEqual('A');
   });
 
