@@ -13,11 +13,11 @@ describe('Space Age', () => {
     expect(spaceage.age('mercury', 2134835688)).toEqual(280.88);
   });
 
-  xit('calculates age on Venus', () => {
+  it('calculates age on Venus', () => {
     expect(spaceage.age('venus', 189839836)).toEqual(9.78);
   });
 
-  xit('calculates age on Mars', () => {
+  it('calculates age on Mars', () => {
     expect(spaceage.age('mars', 2129871239)).toEqual(35.88);
   });
 
