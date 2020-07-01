@@ -29,4 +29,8 @@ describe('Transcription', () => {
   it('transcribes all DNA nucleotides to their RNA complements', () => {
     expect(transcription.toRNA('ACGTGGTCTTAA')).toEqual('UGCACCAGAAUU');
   });
+
+  it('returns error to any non-RNA data inputed', () => {
+    expect(transcription.toRNA('ACXTGGTCTVAA')).toEqual('UG?ACCAGA?UU');
+  });
 });
