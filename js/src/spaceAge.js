@@ -1,17 +1,16 @@
 class SpaceAge {
   constructor() {
     this.earthYearInSeconds = 31557600;
+    this.planetOrbitalPeriods = {
+      earth: 1,
+      mercury: 0.2408467,
+      venus: 0.61519726,
+      mars: 1.8808158
+    };
   }
+
   age(planet, secondsAge) {
-    if (planet === 'mercury') {
-      this.earthYearInSeconds *= 0.2408467;
-    }
-    if (planet === 'venus') {
-      this.earthYearInSeconds *= 0.61519726;
-    }
-    if (planet === 'mars') {
-      this.earthYearInSeconds *= 1.8808158;
-    }
-    return parseFloat((secondsAge / this.earthYearInSeconds).toFixed(2));
+    let planetYearInSeconds = this.earthYearInSeconds *= this.planetOrbitalPeriods[planet];
+    return parseFloat((secondsAge / planetYearInSeconds).toFixed(2));
   }
 }
