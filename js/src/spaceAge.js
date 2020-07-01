@@ -1,0 +1,5 @@
+class SpaceAge {
+  age() {
+    
+  }
+}
