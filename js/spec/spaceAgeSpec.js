@@ -9,7 +9,7 @@ describe('Space Age', () => {
     expect(spaceage.age('earth', 1000000000)).toEqual(31.69);
   });
 
-  xit('calculates age on Mercury', () => {
+  it('calculates age on Mercury', () => {
     expect(spaceage.age('mercury', 2134835688)).toEqual(280.88);
   });
 
