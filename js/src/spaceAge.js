@@ -14,7 +14,7 @@ class SpaceAge {
   }
 
   age(planet, secondsAge) {
-    let planetYearInSeconds = this.earthYearInSeconds *= this.planetOrbitalPeriods[planet];
+    let planetYearInSeconds = this.earthYearInSeconds * this.planetOrbitalPeriods[planet];
     return parseFloat((secondsAge / planetYearInSeconds).toFixed(2));
   }
 }

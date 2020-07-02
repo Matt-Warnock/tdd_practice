@@ -36,4 +36,8 @@ describe('Space Age', () => {
   it('calculates age on Neptune', () => {
     expect(spaceage.age('neptune', 1821023456)).toEqual(0.35);
   });
+
+  it('returns no number when an unrecognized planet is entered', () => {
+    expect(spaceage.age('pluto', 1821023456)).toEqual(NaN);
+  });
 });
