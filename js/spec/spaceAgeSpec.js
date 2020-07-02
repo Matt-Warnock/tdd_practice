@@ -38,6 +38,6 @@ describe('Space Age', () => {
   });
 
   it('returns no number when an unrecognized planet is entered', () => {
-    expect(spaceage.age('pluto', 1821023456)).toEqual(NaN);
+    expect(spaceage.age('pluto', 1821023456)).toEqual(null);
   });
 });
