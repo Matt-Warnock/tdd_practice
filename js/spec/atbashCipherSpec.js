@@ -18,11 +18,11 @@ describe('Atbash Cipher', () => {
       expect(cipher.encode('OMG')).toEqual('lnt');
     });
 
-    xit('encodes spaces', () => {
+    it('encodes spaces', () => {
       expect(cipher.encode('O M G')).toEqual('lnt');
     });
 
-    xit('encodes mindblowingly', () => {
+    it('encodes mindblowingly', () => {
       expect(cipher.encode('mindblowingly')).toEqual('nrmwy oldrm tob');
     });
 

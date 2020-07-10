@@ -12,7 +12,12 @@ class AtbashCipher {
           encoded += cipher[index];
         }
       });
+      if (encoded.replace(' ', '').length  % 5 === 0) {
+        encoded += ' ';
+      }
     });
+
     return encoded;
+
   }
 }
