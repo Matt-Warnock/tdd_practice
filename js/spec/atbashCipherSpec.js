@@ -10,11 +10,11 @@ describe('Atbash Cipher', () => {
       expect(cipher.encode('yes')).toEqual('bvh');
     });
 
-    xit('encodes no', () => {
+    it('encodes no', () => {
       expect(cipher.encode('no')).toEqual('ml');
     });
 
-    xit('encodes OMG', () => {
+    it('encodes OMG', () => {
       expect(cipher.encode('OMG')).toEqual('lnt');
     });
 
