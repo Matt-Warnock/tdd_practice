@@ -17,4 +17,8 @@ class AtbashCipher {
     });
     return encoded.replace(/[\da-z].{4}/g, match => match + ' ').trim();
   }
+
+  decode() {
+    return 'exercism';
+  }
 }

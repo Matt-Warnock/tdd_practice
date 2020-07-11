@@ -42,7 +42,7 @@ describe('Atbash Cipher', () => {
   });
 
   describe('#decode', () => {
-    xit('decodes exercism', () => {
+    it('decodes exercism', () => {
       expect(cipher.decode('vcvix rhn')).toEqual('exercism');
     });
 
