@@ -46,7 +46,7 @@ describe('Atbash Cipher', () => {
       expect(cipher.decode('vcvix rhn')).toEqual('exercism');
     });
 
-    xit('decodes a sentence', () => {
+    it('decodes a sentence', () => {
       const messageToDecode = 'zmlyh gzxov rhlug vmzhg vkkrm thglm v';
       const decodedMessage = 'anobstacleisoftenasteppingstone';
       expect(cipher.decode(messageToDecode)).toEqual(decodedMessage);
