@@ -52,7 +52,7 @@ describe('Atbash Cipher', () => {
       expect(cipher.decode(messageToDecode)).toEqual(decodedMessage);
     });
 
-    xit('decodes numbers', () => {
+    it('decodes numbers', () => {
       expect(cipher.decode('gvhgr mt123 gvhgr mt')).toEqual('testing123testing');
     });
 

@@ -5,32 +5,28 @@ class AtbashCipher {
   }
 
   encode(input) {
-    let encoded = '';
-
-    Array.from(input.toLowerCase()).forEach(character => {
-      if (/\d/.exec(character)) {
-        encoded += character;
-        return;
-      }
-      this.alphabet.forEach((letter, index) => {
-        if (character === letter) {
-          encoded += this.cipher[index];
-        }
-      });
-    });
+    let encoded = this.translate(input, this.alphabet, this.cipher);
     return encoded.replace(/[\da-z].{4}/g, match => match + ' ').trim();
   }
 
   decode(input) {
-    let decoded = '';
+    return this.translate(input, this.cipher, this.alphabet);
+  }
 
-    Array.from(input).forEach(character => {
-      this.cipher.forEach((letter, index) => {
+  translate(text, alphaFrom, alphaTo) {
+    let translated = '';
+
+    Array.from(text.toLowerCase()).forEach(character => {
+      if (/\d/.exec(character)) {
+        translated += character;
+        return;
+      }
+      alphaFrom.forEach((letter, index) => {
         if (character === letter) {
-          decoded += this.alphabet[index];
+          translated += alphaTo[index];
         }
       });
     });
-    return decoded;
+    return translated;
   }
 }
