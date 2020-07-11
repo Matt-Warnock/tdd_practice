@@ -26,15 +26,15 @@ describe('Atbash Cipher', () => {
       expect(cipher.encode('mindblowingly')).toEqual('nrmwy oldrm tob');
     });
 
-    xit('encodes numbers', () => {
+    it('encodes numbers', () => {
       expect(cipher.encode('Testing,1 2 3, testing.')).toEqual('gvhgr mt123 gvhgr mt');
     });
 
-    xit('encodes deep thought', () => {
+    it('encodes deep thought', () => {
       expect(cipher.encode('Truth is fiction.')).toEqual('gifgs rhurx grlm');
     });
 
-    xit('encodes all the letters', () => {
+    it('encodes all the letters', () => {
       const messageToEncode = 'The quick brown fox jumps over the lazy dog.';
       const encodedMessage = 'gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt';
       expect(cipher.encode(messageToEncode)).toEqual(encodedMessage);

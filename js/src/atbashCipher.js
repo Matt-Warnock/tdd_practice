@@ -7,17 +7,17 @@ class AtbashCipher {
     let message = input.toLowerCase();
 
     Array.from(message).forEach(character => {
+      if (/\d/.exec(character)) {
+        encoded += character;
+        return;
+      }
       alphabet.forEach((letter, index) => {
         if (character === letter) {
           encoded += cipher[index];
         }
       });
-      if (encoded.replace(' ', '').length  % 5 === 0) {
-        encoded += ' ';
-      }
     });
 
-    return encoded;
-
+    return encoded.replace(/[\da-z].{4}/g, match => match + ' ').trim();
   }
 }
