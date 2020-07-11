@@ -1,12 +1,10 @@
 class AtbashCipher {
   encode(input) {
     let encoded = '';
-    let alphabet = Array.from('abcdefghijklmnopqrstuvwxyz');
-    let cipher = alphabet.slice().reverse();
+    const alphabet = Array.from('abcdefghijklmnopqrstuvwxyz'),
+          cipher = alphabet.slice().reverse();
 
-    let message = input.toLowerCase();
-
-    Array.from(message).forEach(character => {
+    Array.from(input.toLowerCase()).forEach(character => {
       if (/\d/.exec(character)) {
         encoded += character;
         return;
@@ -17,7 +15,6 @@ class AtbashCipher {
         }
       });
     });
-
     return encoded.replace(/[\da-z].{4}/g, match => match + ' ').trim();
   }
 }
