@@ -56,17 +56,17 @@ describe('Atbash Cipher', () => {
       expect(cipher.decode('gvhgr mt123 gvhgr mt')).toEqual('testing123testing');
     });
 
-    xit('decodes all the letters', () => {
+    it('decodes all the letters', () => {
       const messageToDecode = 'gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt';
       const decodedMessage = 'thequickbrownfoxjumpsoverthelazydog';
       expect(cipher.decode(messageToDecode)).toEqual(decodedMessage);
     });
 
-    xit('decodes with too many spaces', () => {
+    it('decodes with too many spaces', () => {
       expect(cipher.decode('vc vix    r hn')).toEqual('exercism');
     });
 
-    xit('decodes with no spaces', () => {
+    it('decodes with no spaces', () => {
       const messageToDecode = 'zmlyhgzxovrhlugvmzhgvkkrmthglmv';
       const decodedMessage = 'anobstacleisoftenasteppingstone';
       expect(cipher.decode(messageToDecode)).toEqual(decodedMessage);
