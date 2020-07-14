@@ -9,11 +9,11 @@ describe('Hamming', () => {
     expect(hamming.compute('', '')).toEqual(0);
   });
 
-  xit('computes single letter identical strands', () => {
+  it('computes single letter identical strands', () => {
     expect(hamming.compute('A', 'A')).toEqual(0);
   });
 
-  xit('computes single letter different strands', () => {
+  it('computes single letter different strands', () => {
     expect(hamming.compute('G', 'T')).toEqual(1);
   });
 
