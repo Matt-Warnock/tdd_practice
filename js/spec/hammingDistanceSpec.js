@@ -17,11 +17,11 @@ describe('Hamming', () => {
     expect(hamming.compute('G', 'T')).toEqual(1);
   });
 
-  xit('computes long identical strands', () => {
+  it('computes long identical strands', () => {
     expect(hamming.compute('GGACTGAAATCTG', 'GGACTGAAATCTG')).toEqual(0);
   });
 
-  xit('computes long different strands', () => {
+  it('computes long different strands', () => {
     expect(hamming.compute('GGACGGATTCTG', 'AGGACGGATTCT')).toEqual(9);
   });
 
