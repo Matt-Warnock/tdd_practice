@@ -37,13 +37,13 @@ describe('Hamming', () => {
     );
   });
 
-  xit('disallows when left strand is empty', () => {
+  it('disallows when left strand is empty', () => {
     expect(() => hamming.compute('', 'G')).toThrow(
       new Error('left strand must not be empty'),
     );
   });
 
-  xit('disallows when right strand is empty', () => {
+  it('disallows when right strand is empty', () => {
     expect(() => hamming.compute('G', '')).toThrow(
       new Error('right strand must not be empty'),
     );
