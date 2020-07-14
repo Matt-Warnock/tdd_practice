@@ -1,19 +1,22 @@
 class AtbashCipher {
   constructor() {
-    this.alphabet = Array.from('abcdefghijklmnopqrstuvwxyz');
-    this.cipher = this.alphabet.slice().reverse();
+    const alphabet = Array.from('abcdefghijklmnopqrstuvwxyz'),
+          cipher = alphabet.slice().reverse();
+
+    this.converstionTable = {};
+    alphabet.map((letter, i) => this.converstionTable[letter] = cipher[i]);
   }
 
   encode(input) {
-    let encoded = this.translate(input, this.alphabet, this.cipher);
-    return encoded.replace(/[\da-z].{4}/g, match => match + ' ').trim();
+    let encoded = this.translate(input);
+    return encoded.replace(/\w{5}/g, match => match + ' ').trim();
   }
 
   decode(input) {
-    return this.translate(input, this.cipher, this.alphabet);
+    return this.translate(input);
   }
 
-  translate(text, alphaFrom, alphaTo) {
+  translate(text) {
     let translated = '';
 
     Array.from(text.toLowerCase()).forEach(character => {
@@ -21,12 +24,12 @@ class AtbashCipher {
         translated += character;
         return;
       }
-      alphaFrom.forEach((letter, index) => {
-        if (character === letter) {
-          translated += alphaTo[index];
-        }
-      });
+
+      if (/[a-z]/.exec(character)) {
+        translated += this.converstionTable[character];
+      }
     });
+
     return translated;
   }
 }
