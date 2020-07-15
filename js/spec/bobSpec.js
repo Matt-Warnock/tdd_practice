@@ -10,12 +10,12 @@ describe('Bob', () => {
     expect(reply).toEqual('Whatever.');
   });
 
-  xit('replies to shouting', () => {
+  it('replies to shouting', () => {
     const reply = bob.hey('WATCH OUT!');
     expect(reply).toEqual('Whoa, chill out!');
   });
 
-  xit('replies to shouting gibberish', () => {
+  it('replies to shouting gibberish', () => {
     const reply = bob.hey('FCECDFCAAB');
     expect(reply).toEqual('Whoa, chill out!');
   });
