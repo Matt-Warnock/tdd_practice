@@ -90,42 +90,42 @@ describe('Bob', () => {
     expect(reply).toEqual('Sure.');
   });
 
-  xit('replies to silence', () => {
+  it('replies to silence', () => {
     const reply = bob.hey('');
     expect(reply).toEqual('Fine. Be that way!');
   });
 
-  xit('replies to prolonged silence', () => {
+  it('replies to prolonged silence', () => {
     const reply = bob.hey('          ');
     expect(reply).toEqual('Fine. Be that way!');
   });
 
-  xit('replies to alternate silence', () => {
+  it('replies to alternate silence', () => {
     const reply = bob.hey("\t\t\t\t\t\t\t\t\t\t");
     expect(reply).toEqual('Fine. Be that way!');
   });
 
-  xit('replies to multiple line question', () => {
+  it('replies to multiple line question', () => {
     const reply = bob.hey("\nDoes this cryogenic chamber make me look fat?\nno");
     expect(reply).toEqual('Whatever.');
   });
 
-  xit('replies to starting with whitespace', () => {
+  it('replies to starting with whitespace', () => {
     const reply = bob.hey('         hmmmmmmm...');
     expect(reply).toEqual('Whatever.');
   });
 
-  xit('replies to ending with whitespace', () => {
+  it('replies to ending with whitespace', () => {
     const reply = bob.hey('Okay if like my  spacebar  quite a bit?   ');
     expect(reply).toEqual('Sure.');
   });
 
-  xit('replies to other whitespace', () => {
+  it('replies to other whitespace', () => {
     const reply = bob.hey("\n\r \t");
     expect(reply).toEqual('Fine. Be that way!');
   });
 
-  xit('replies to non-question ending with whitespace', () => {
+  it('replies to non-question ending with whitespace', () => {
     const reply = bob.hey('This is a statement ending with whitespace      ');
     expect(reply).toEqual('Whatever.');
   });
