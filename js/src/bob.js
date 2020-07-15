@@ -1,14 +1,15 @@
 class Bob {
   hey(string) {
-    if (/[A-Z]+[^a-z]!|^[A-Z]+$/g.exec(string)) {
+    if (/[A-Z][^a-z]!|^[A-Z\s]+$/g.exec(string)) {
       return 'Whoa, chill out!';
     }
 
-    if (/[a-z0-9]\?$/g.exec(string)) {
+    if (/.\?$/g.exec(string)) {
+      if (/^[A-Z\s]+\?$/g.exec(string)) {
+        return 'Calm down, I know what I\'m doing!';
+      }
+
       return 'Sure.';
-    }
-    if (/[A-Z]{2,}\?$/g.exec(string)) {
-      return 'Calm down, I know what I\'m doing!';
     }
 
     return 'Whatever.';

@@ -65,27 +65,27 @@ describe('Bob', () => {
     expect(reply).toEqual('Sure.');
   });
 
-  xit('replies to shouting with special characters', () => {
+  it('replies to shouting with special characters', () => {
     const reply = bob.hey('ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!');
     expect(reply).toEqual('Whoa, chill out!');
   });
 
-  xit('replies to shouting with no exclamation mark', () => {
+  it('replies to shouting with no exclamation mark', () => {
     const reply = bob.hey('I HATE YOU');
     expect(reply).toEqual('Whoa, chill out!');
   });
 
-  xit('replies to statement containing question mark', () => {
+  it('replies to statement containing question mark', () => {
     const reply = bob.hey('Ending with a ? means a question.');
     expect(reply).toEqual('Whatever.');
   });
 
-  xit('replies to non-letters with question', () => {
+  it('replies to non-letters with question', () => {
     const reply = bob.hey(':) ?');
     expect(reply).toEqual('Sure.');
   });
 
-  xit('replies to prattling on', () => {
+  it('replies to prattling on', () => {
     const reply = bob.hey('Wait! Hang on. Are you going to be OK?');
     expect(reply).toEqual('Sure.');
   });
