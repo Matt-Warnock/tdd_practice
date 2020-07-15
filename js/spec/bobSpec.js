@@ -20,17 +20,17 @@ describe('Bob', () => {
     expect(reply).toEqual('Whoa, chill out!');
   });
 
-  xit('replies to asking a question', () => {
+  it('replies to asking a question', () => {
     const reply = bob.hey('Does this cryogenic chamber make me look fat?');
     expect(reply).toEqual('Sure.');
   });
 
-  xit('replies to asking a numeric question', () => {
+  it('replies to asking a numeric question', () => {
     const reply = bob.hey('You are, what, like 15?');
     expect(reply).toEqual('Sure.');
   });
 
-  xit('replies to asking gibberish', () => {
+  it('replies to asking gibberish', () => {
     const reply = bob.hey('fffbbcbeab?');
     expect(reply).toEqual('Sure.');
   });
