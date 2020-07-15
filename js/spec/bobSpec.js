@@ -35,12 +35,12 @@ describe('Bob', () => {
     expect(reply).toEqual('Sure.');
   });
 
-  xit('replies to talking forcefully', () => {
+  it('replies to talking forcefully', () => {
     const reply = bob.hey("Let's go make out behind the gym!");
     expect(reply).toEqual('Whatever.');
   });
 
-  xit('replies to using acronyms in regular speech', () => {
+  it('replies to using acronyms in regular speech', () => {
     const reply = bob.hey("It's OK if you don't want to go to the DMV.");
     expect(reply).toEqual('Whatever.');
   });
