@@ -45,22 +45,22 @@ describe('Bob', () => {
     expect(reply).toEqual('Whatever.');
   });
 
-  xit('replies to forceful question', () => {
+  it('replies to forceful question', () => {
     const reply = bob.hey('WHAT THE HELL WERE YOU THINKING?');
     expect(reply).toEqual('Calm down, I know what I\'m doing!');
   });
 
-  xit('replies to shouting numbers', () => {
+  it('replies to shouting numbers', () => {
     const reply = bob.hey('1, 2, 3 GO!');
     expect(reply).toEqual('Whoa, chill out!');
   });
 
-  xit('replies to only numbers', () => {
+  it('replies to only numbers', () => {
     const reply = bob.hey('1, 2, 3');
     expect(reply).toEqual('Whatever.');
   });
 
-  xit('replies to question with only numbers', () => {
+  it('replies to question with only numbers', () => {
     const reply = bob.hey('4?');
     expect(reply).toEqual('Sure.');
   });
