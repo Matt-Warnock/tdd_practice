@@ -1,7 +1,13 @@
 class Bob {
   constructor() {
-    this.regEx = [/^\s*$/g, /^[A-Z\s]+\?$/g, /.\?\s*$/g, /[A-Z][^a-z]!|^[A-Z\s]+$/g];
-    this.responces = ['Fine. Be that way!', 'Calm down, I know what I\'m doing!', 'Sure.', 'Whoa, chill out!'];
+    this.regEx = [/^\s*$/g,
+                  /^[A-Z\s]+\?$/g,
+                  /.\?\s*$/g,
+                  /[^a-z]!|^[A-Z\s]+$/g];
+    this.responces = ['Fine. Be that way!',
+                      'Calm down, I know what I\'m doing!',
+                      'Sure.',
+                      'Whoa, chill out!'];
   }
 
   hey(string) {
